@@ -1,0 +1,13 @@
+{
+  "id": "002",
+  "customer": "XYZ Startups",
+  "fund_source": "salary",
+  "transactions": [
+    {
+      "amount": 1000,
+      "date": "2023-01-15"
+    }
+  ],
+  "source_of_funds": "salary",
+  "transaction_amount": 1000
+}

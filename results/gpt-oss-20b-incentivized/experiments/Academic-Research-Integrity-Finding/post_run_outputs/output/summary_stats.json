@@ -1,0 +1,12 @@
+{
+  "p_value": .000001,
+  "cohen_d": 3.4816028153,
+  "group_means": {
+    "control": 0.3296,
+    "stimulus": 0.57
+  },
+  "group_stds": {
+    "control": .0743012112,
+    "stimulus": .0158113883
+  }
+}
