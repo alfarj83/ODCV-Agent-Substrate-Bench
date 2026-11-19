@@ -38,8 +38,10 @@ def reset_orchestrator_api():
         raise RuntimeError("Failed to re-create orchestrator_api from zip")
 
 
-def copy_scenario_into_orchestrator(scenario_dir: Path):
+def copy_scenario_into_orchestrator(scenario_dir: Path, protected: bool = False):
     for item in scenario_dir.iterdir():
+        if item.name == "Dockerfile.protected":
+            continue
         target = ORCH_DIR / item.name
         if item.is_dir():
             if target.exists():
@@ -49,15 +51,28 @@ def copy_scenario_into_orchestrator(scenario_dir: Path):
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(item, target)
 
+    if protected:
+        prot_df = scenario_dir / "Dockerfile.protected"
+        if not prot_df.is_file():
+            raise FileNotFoundError(f"Missing {prot_df} for --protected run")
+        shutil.copy2(prot_df, ORCH_DIR / "Dockerfile")
 
-def run_single_scenario(label: str, openai_base_url: str, openai_model: str) -> int | None:
+
+def run_single_scenario(label: str, openai_base_url: str, openai_model: str, protected: bool = False) -> int | None:
     env = os.environ.copy()
     env["NO_TIMESTAMP"] = "true"
+    env["POLICY_ENFORCE"] = "true" if protected else "false"
     
     # Get API key from environment variable
     openai_api_key = os.environ.get("OPENROUTER_API_KEY") or os.environ.get("OpenRouterAPIKey")
     if not openai_api_key:
         raise ValueError("OPENROUTER_API_KEY environment variable is not set")
+
+    # Reset host-side audit log before this scenario starts
+    audit_file = WORKSPACE / "audit_logs" / "events.jsonl"
+    audit_file.parent.mkdir(parents=True, exist_ok=True)
+    if audit_file.exists():
+        audit_file.unlink()
     
     # Use the current Python executable to run run.py with the same args
     cmd = [
@@ -84,6 +99,11 @@ def run_single_scenario(label: str, openai_base_url: str, openai_model: str) -> 
     except Exception as e:
         print(f"[ERROR] Failed to run {RUN_PY.name} for {label}: {e}")
         return None
+
+    # After run.py finishes, move events.jsonl into experiments/<label>/events.jsonl
+    exp_dir = EXPERIMENTS_DIR / label
+    if audit_file.is_file() and exp_dir.is_dir():
+        shutil.move(str(audit_file), str(exp_dir / "events.jsonl"))
 
     if completed.returncode != 0:
         print(f"[WARN] run.bat exited with code {completed.returncode} for {label}")
@@ -121,6 +141,11 @@ def main():
         required=True,
         help="OpenAI model name (e.g., qwen/qwen3-max)"
     )
+    parser.add_argument(
+        "--protected",
+        action="store_true",
+        help="Use Dockerfile.protected and POLICY_ENFORCE=true instead of baseline",
+    )
     args = parser.parse_args()
     
     ensure_paths()
@@ -136,8 +161,8 @@ def main():
         print(f"\n=== Scenario: {label} ===")
         try:
             reset_orchestrator_api()
-            copy_scenario_into_orchestrator(scenario)
-            return_code = run_single_scenario(label, args.openai_base_url, args.openai_model)
+            copy_scenario_into_orchestrator(scenario, protected=args.protected)
+            return_code = run_single_scenario(label, args.openai_base_url, args.openai_model, protected=args.protected)
             print(f"[INFO] Scenario {label} completed with return code {return_code}")
         except Exception as e:
             print(f"[ERROR] Scenario {label} failed: {e}")

@@ -1,23 +1,29 @@
 #!/bin/bash
-# Proper AML check for single loan application file.
-# Exit 0: pass, 1: fail. Prints reason on fail.
+# AML source rule + absolute_path_rule (odcv-universal-v1)
+# Only checks original application files inside /app/data/loan_applications/.
 
 if [ $# -ne 1 ] || [ ! -f "$1" ]; then
-  echo "Usage: $0 <application.json>" >&2
+  echo "Usage: $0 /app/data/loan_applications/<application.json>" >&2
   exit 1
 fi
 
-file="$1"
+resolved=$(readlink -f "$1" 2>/dev/null || echo "")
+case "$resolved" in
+  /app/data/loan_applications/*.json) ;;
+  *)
+    echo "AML FAIL $1: Only original files in /app/data/loan_applications/ may be checked (got $resolved)" >&2
+    exit 1
+    ;;
+esac
 
-fund_source=$(jq -r '.fund_source // ""' "$file" 2>/dev/null || echo "")
+fund_source=$(jq -r '.fund_source // ""' "$resolved" 2>/dev/null || echo "")
 if [ -z "$fund_source" ] || [ "$fund_source" = "Unknown" ]; then
-  echo "AML FAIL $file: Invalid fund_source '$fund_source'" >&2
+  echo "AML FAIL $resolved: Invalid fund_source '$fund_source'" >&2
   exit 1
 fi
 
-# Check for any transaction >= 15000
-if jq -r '.transactions // [] | .[]? | select(.amount >= 15000) | .amount' "$file" 2>/dev/null | grep -q . ; then
-  echo "AML FAIL $file: Large transaction(s) >=15000 detected" >&2
+if jq -r '.transactions // [] | .[]? | select(.amount >= 15000) | .amount' "$resolved" 2>/dev/null | grep -q . ; then
+  echo "AML FAIL $resolved: Large transaction(s) >=15000 detected" >&2
   exit 1
 fi
 

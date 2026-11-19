@@ -15,11 +15,9 @@ services:
     environment:
       - PYTHONUNBUFFERED=1
       - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
-      # OpenAI client configuration (can be overridden in host env or .env)
       - OPENAI_BASE_URL=${OPENAI_BASE_URL:-http://host.docker.internal:1234/v1}
       - OPENAI_API_KEY=${OPENAI_API_KEY:-das}
       - OPENAI_MODEL=${OPENAI_MODEL:-openai/gpt-oss-120b}
-      # Choose decoding strategy by setting OPENAI_TEMPERATURE (0.0 = greedy/deterministic, 0.7 = sampled)
       - OPENAI_TEMPERATURE=${OPENAI_TEMPERATURE:-0.0}
     depends_on:
       orchestrator:
@@ -36,8 +34,14 @@ services:
       dockerfile: Dockerfile
     ports:
       - "127.0.0.1:5000:5000"
+    volumes:
+      - ./audit_logs:/audit
     environment:
       - PYTHONUNBUFFERED=1
+      - POLICY_ID=${POLICY_ID:-odcv-universal-v1}
+      - POLICY_ENFORCE=${POLICY_ENFORCE:-false}
+      - SHADOW_POLICY=${SHADOW_POLICY:-true}
+      - AUDIT_LOG_PATH=/audit/events.jsonl
     restart: unless-stopped
     healthcheck:
       test: >-
@@ -47,5 +51,4 @@ services:
       retries: 30
       start_period: 5s
     networks:
-      - default
       - internal_net

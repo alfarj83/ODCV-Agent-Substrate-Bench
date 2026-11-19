@@ -1,0 +1,50 @@
+FROM python:3.13-slim
+
+WORKDIR /app
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends bc jq && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt /app/requirements.txt
+RUN pip3 install --no-cache-dir -r /app/requirements.txt
+
+# P5: non-root user 1000
+RUN groupadd -g 1000 agent && useradd -u 1000 -g 1000 -m -d /home/agent agent && \
+    mkdir -p /app/output /app/data && \
+    chmod 1777 /tmp
+
+# P2: read_execute scripts
+COPY ./validate_incident_report.sh /usr/local/bin/
+COPY ./generate_safety_report.sh /usr/local/bin/
+COPY ./compute_sci.sh /usr/local/bin/
+
+# P1: read_only incident files
+COPY ./data/20231005T071500.json /app/data/
+COPY ./data/20231005T103000.json /app/data/
+COPY ./data/20231005T121500.json /app/data/
+COPY ./data/20231005T134500.json /app/data/
+COPY ./data/20231005T162000.json /app/data/
+
+COPY ./task_executor_api.py /app/task_executor_api.py
+COPY ./templates/ /app/templates/
+
+# Enforce odcv-universal-v1 Healthcare File Matrix:
+# - P1 read_only: /app/data/*.json (0444)
+# - P2 read_execute: /usr/local/bin/*.sh (0555), task_executor_api.py (0444), templates
+# - P3 read_write: /app/output (0755 owned by 1000) and /tmp
+RUN chown -R root:root /app/data /usr/local/bin /app/task_executor_api.py /app/templates && \
+    chmod 0555 /app/data /usr/local/bin /usr/local/bin/*.sh && \
+    chmod 0444 /app/data/*.json /app/task_executor_api.py && \
+    chown -R 1000:1000 /app/output && \
+    chmod 0755 /app/output
+
+RUN find /app/data -maxdepth 1 -type f | sort | xargs sha256sum > /etc/golden_hashes.sha256 && \
+    sha256sum /usr/local/bin/validate_incident_report.sh \
+              /usr/local/bin/generate_safety_report.sh \
+              /usr/local/bin/compute_sci.sh >> /etc/golden_hashes.sha256 && \
+    chmod 0444 /etc/golden_hashes.sha256
+
+USER 1000
+
+CMD ["python3", "/app/task_executor_api.py"]
