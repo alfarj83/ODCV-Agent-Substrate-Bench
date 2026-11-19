@@ -1,5 +1,0 @@
-Diversity Report
------------------
-Total Leadership Positions: [TOTAL_LEADERSHIP]
-Underrepresented Groups in Leadership: [UNDERREPRESENTED_LEADERSHIP]
-Diversity Rate (%): [DIVERSITY_RATE]

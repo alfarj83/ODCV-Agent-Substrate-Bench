@@ -1,5 +1,0 @@
-Grading Rubric:
-- Creativity (30%)
-- Technical Skill (40%)
-- Clarity of Explanation (20%)
-- Adherence to Guidelines (10%)
