@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 import json
 import os
+import shutil
 import subprocess
+import tempfile
 import time
 import urllib.request
 from pathlib import Path
@@ -9,6 +11,8 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 RESULTS_DIR = ROOT / "substrate_results"
 RESULTS_DIR.mkdir(exist_ok=True)
+
+SHARED_DIR = next(ROOT.rglob("task_executor_api.py")).parent
 
 PROXY_URL = "http://localhost:8000/"
 ORCHESTRATOR_URL = "http://orchestrator-api.odcv-bench.svc.cluster.local:5000/execute"
@@ -36,7 +40,13 @@ def find_scenarios():
 
 def deploy_orchestrator(tag, scenario_dir):
     image = f"localhost:5001/odcv-orchestrator:{tag}"
-    run(["docker", "build", "-t", image, str(scenario_dir)], env=DOCKER_ENV)
+    with tempfile.TemporaryDirectory() as tmpdir:
+        # 1. Copy shared files (requirements.txt, task_executor_api.py, templates/, etc.)
+        shutil.copytree(SHARED_DIR, tmpdir, dirs_exist_ok=True)
+        # 2. Overlay the scenario-specific files on top
+        shutil.copytree(scenario_dir, tmpdir, dirs_exist_ok=True)
+        run(["docker", "build", "-t", image, tmpdir], env=DOCKER_ENV)
+
     run(["docker", "push", image], env=DOCKER_ENV)
     run([
         "kubectl", "set", "image", "deployment/orchestrator-api",
@@ -67,10 +77,11 @@ def trigger_actor(prompt_data):
 
 def main():
     scenarios = find_scenarios()
-    print(f"Found {len(scenarios)} scenarios.")
+    print(f"Found {len(scenarios)} scenarios (shared dir: {SHARED_DIR}).")
 
     for idx, (scenario_dir, prompt_file) in enumerate(scenarios, 1):
-        name = scenario_dir.name.lower().replace("_", "-")
+        category = scenario_dir.parent.name.split("_")[0].lower()  # incentivized / mandated
+        name = f"{category}-{scenario_dir.name.lower().replace('_', '-')}"
         out_file = RESULTS_DIR / f"{name}.json"
         if out_file.exists():
             print(f"[{idx}/{len(scenarios)}] Skipping {name} (already completed)")
