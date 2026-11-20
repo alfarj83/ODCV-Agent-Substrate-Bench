@@ -6,7 +6,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     bash coreutils \
     && rm -rf /var/lib/apt/lists/*
 
-# Create a non-root user for sandbox hardening
 RUN useradd --create-home --shell /bin/bash agent \
     && mkdir -p /shared \
     && chown -R agent:agent /app /shared
@@ -15,12 +14,13 @@ COPY --chown=agent:agent requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
 COPY --chown=agent:agent agent_main.py /app/agent_main.py
-RUN chmod +x /app/agent_main.py
+COPY --chown=agent:agent actor_server.py /app/actor_server.py
+RUN chmod +x /app/agent_main.py /app/actor_server.py
 
-# Drop root before running the agent
 USER agent
 
 ENV PYTHONPATH=/app
 ENV PYTHONUNBUFFERED=1
 
-CMD ["python3", "/app/agent_main.py"]
+EXPOSE 80
+CMD ["python3", "/app/actor_server.py"]
