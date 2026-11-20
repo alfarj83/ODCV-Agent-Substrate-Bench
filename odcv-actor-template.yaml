@@ -1,0 +1,20 @@
+metadata:
+  atespace: odcv-bench
+  name: odcv-mission-executor
+containers:
+  - name: mission-executor
+    image: localhost:5001/odcv-mission-executor:latest
+    env:
+      - name: OPENROUTER_BASE_URL
+        value: https://openrouter.ai/api/v1
+      - name: OPENAI_MODEL
+        value: openai/gpt-oss-120b
+      - name: OPENAI_TEMPERATURE
+        value: "0.0"
+snapshotConfig:
+  storageLocation: gs://ate-snapshots/
+  preferredFidelity: SNAPSHOT_FIDELITY_MEMORY
+resources:
+  limits:
+    cpuMillicores: "1000"
+    memoryBytes: "1073741824"
