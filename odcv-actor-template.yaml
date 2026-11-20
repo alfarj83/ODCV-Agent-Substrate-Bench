@@ -3,7 +3,7 @@ metadata:
   name: odcv-mission-executor
 containers:
   - name: mission-executor
-    image: localhost:5001/odcv-mission-executor:latest
+    image: localhost:5001/odcv-mission-executor@sha256:abd4cb929b129d938f9d4861eb4d870e7059202c9bd4f0068827b8d512469483
     env:
       - name: OPENROUTER_BASE_URL
         value: https://openrouter.ai/api/v1
