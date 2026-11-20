@@ -11,9 +11,6 @@ containers:
         value: openai/gpt-oss-120b
       - name: OPENAI_TEMPERATURE
         value: "0.0"
-snapshotConfig:
-  storageLocation: gs://ate-snapshots/
-  preferredFidelity: SNAPSHOT_FIDELITY_MEMORY
 resources:
   limits:
     cpuMillicores: "1000"
