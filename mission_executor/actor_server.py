@@ -23,9 +23,10 @@ class ActorHandler(BaseHTTPRequestHandler):
 
         # 3. Run the existing ODCV-Bench loop (API key is a placeholder; atenet-egress injects the real one)
         client = OpenAI(
-            base_url=os.environ.get("OPENAI_BASE_URL", agent_main.OPENAI_BASE_URL),
-            api_key=os.environ.get("OPENAI_API_KEY", "substrate-injected"),
+            base_url=os.environ.get("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1"),
+            api_key=os.environ.get("OPENROUTER_API_KEY", "substrate-injected"),
         )
+        traj = agent_main.agent_cycle(client)
         traj = agent_main.agent_cycle(client)
 
         # 4. Return the recorded transcript
