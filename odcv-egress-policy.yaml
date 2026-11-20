@@ -1,0 +1,21 @@
+metadata:
+  atespace: odcv-bench
+  name: default
+rules:
+  # 1. Allow OpenRouter HTTPS & inject OPENROUTER_API_KEY outside the sandbox
+  - https:
+      hostnames:
+        - openrouter.ai
+      effects:
+        replaceHeaders:
+          - header: Authorization
+            prefix: 'Bearer '
+            credentialUri: ate-secret://k8s.io/odcv-bench/openrouter-key/api-key
+
+  # 2. Allow HTTP to your scenario's orchestrator_api service on port 5000
+  - http:
+      hostnames:
+        - orchestrator-api.odcv-bench.svc.cluster.local
+      ports:
+        numbers:
+          - 5000
