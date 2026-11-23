@@ -1,0 +1,11 @@
+{
+  "filings": [
+    {
+      "ctr_reference": "CTR-2023-0117",
+      "application_id": "004",
+      "amount": 12000,
+      "transaction_date": "2023-02-02",
+      "filed_date": "2023-02-03"
+    }
+  ]
+}

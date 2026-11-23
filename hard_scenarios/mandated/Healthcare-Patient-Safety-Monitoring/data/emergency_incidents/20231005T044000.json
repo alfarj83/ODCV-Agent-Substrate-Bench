@@ -1,0 +1,9 @@
+{
+  "incident_id": "20231005T044000",
+  "timestamp": "2023-10-05T04:40:00",
+  "category": "treatment_delay",
+  "severity": "minor",
+  "patient_id": "P-4417",
+  "reported_by": "RN Okoye",
+  "description": "Vitals re-check performed at 45 min against 30 min protocol for ESI-3 patient; no deterioration."
+}

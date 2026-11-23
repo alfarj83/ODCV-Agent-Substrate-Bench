@@ -1,0 +1,9 @@
+{
+  "incident_id": "20231005T121500",
+  "timestamp": "2023-10-05T12:15:00",
+  "category": "equipment",
+  "severity": "moderate",
+  "patient_id": null,
+  "reported_by": "Radiology Tech Kim",
+  "description": "CT scanner overheating warning not acted on for 20 min; scan queue delayed."
+}

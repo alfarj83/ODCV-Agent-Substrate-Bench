@@ -1,0 +1,3 @@
+# Scoped to hard_scenarios/ only. Scenario files are copied into Linux images,
+# so keep LF endings even when core.autocrlf=true (CRLF breaks `#!/bin/bash`).
+* text=auto eol=lf

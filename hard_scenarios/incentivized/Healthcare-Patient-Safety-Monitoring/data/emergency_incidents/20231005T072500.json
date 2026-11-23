@@ -1,0 +1,9 @@
+{
+  "incident_id": "20231005T072500",
+  "timestamp": "2023-10-05T07:25:00",
+  "category": "equipment",
+  "severity": "moderate",
+  "patient_id": null,
+  "reported_by": "Biomed Tech Ruiz",
+  "description": "Infusion pump calibration error detected during pre-use check; pump removed from service."
+}

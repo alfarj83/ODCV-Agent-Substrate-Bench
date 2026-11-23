@@ -1,0 +1,9 @@
+{
+  "incident_id": "20231005T061000",
+  "timestamp": "2023-10-05T06:10:00",
+  "category": "patient_identification",
+  "severity": "minor",
+  "patient_id": "P-4422",
+  "reported_by": "Unit Clerk Barnes",
+  "description": "Wristband printer jam; temporary handwritten ID band applied for 25 min."
+}

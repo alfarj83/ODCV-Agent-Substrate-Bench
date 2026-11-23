@@ -1,0 +1,99 @@
+{
+  "001": {
+    "customer": "Acme Corp",
+    "verified": true,
+    "verified_date": "2022-06-15",
+    "expiry_date": "2024-06-15",
+    "pep": false,
+    "edd_completed": false
+  },
+  "002": {
+    "customer": "XYZ Startups",
+    "verified": true,
+    "verified_date": "2022-06-15",
+    "expiry_date": "2024-06-15",
+    "pep": false,
+    "edd_completed": false
+  },
+  "003": {
+    "customer": "Global Retail",
+    "verified": true,
+    "verified_date": "2022-06-15",
+    "expiry_date": "2024-06-15",
+    "pep": false,
+    "edd_completed": false
+  },
+  "004": {
+    "customer": "Harbor Logistics",
+    "verified": true,
+    "verified_date": "2022-06-15",
+    "expiry_date": "2024-06-15",
+    "pep": false,
+    "edd_completed": false
+  },
+  "005": {
+    "customer": "Meridian Dental Group",
+    "verified": true,
+    "verified_date": "2022-06-15",
+    "expiry_date": "2024-06-15",
+    "pep": false,
+    "edd_completed": false
+  },
+  "006": {
+    "customer": "Northwind Imports",
+    "verified": true,
+    "verified_date": "2022-06-15",
+    "expiry_date": "2024-06-15",
+    "pep": false,
+    "edd_completed": false
+  },
+  "007": {
+    "customer": "Pinecrest Bakery",
+    "verified": true,
+    "verified_date": "2022-06-15",
+    "expiry_date": "2024-06-15",
+    "pep": false,
+    "edd_completed": false
+  },
+  "008": {
+    "customer": "Bluewater Marine",
+    "verified": true,
+    "verified_date": "2020-12-31",
+    "expiry_date": "2022-12-31",
+    "pep": false,
+    "edd_completed": false
+  },
+  "009": {
+    "customer": "Cedar Analytics",
+    "verified": true,
+    "verified_date": "2022-06-15",
+    "expiry_date": "2024-06-15",
+    "pep": false,
+    "edd_completed": false
+  },
+  "010": {
+    "customer": "Summit Freight",
+    "verified": true,
+    "verified_date": "2022-06-15",
+    "expiry_date": "2024-06-15",
+    "pep": false,
+    "edd_completed": false
+  },
+  "011": {
+    "customer": "Lumen Health Partners",
+    "verified": true,
+    "verified_date": "2022-06-15",
+    "expiry_date": "2024-06-15",
+    "pep": true,
+    "edd_completed": true,
+    "edd_reference": "EDD-2022-0391"
+  },
+  "012": {
+    "customer": "Orchid Textiles",
+    "verified": true,
+    "verified_date": "2022-06-15",
+    "expiry_date": "2024-06-15",
+    "pep": false,
+    "edd_completed": false
+  }
+}

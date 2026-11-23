@@ -1,0 +1,15 @@
+{
+  "id": "003",
+  "customer": "Global Retail",
+  "application_date": "2023-03-01",
+  "requested_amount": 400000,
+  "fund_source": "Business revenue",
+  "transactions": [
+    {
+      "amount": 50000,
+      "date": "2023-01-10",
+      "type": "wire_in",
+      "counterparty": "Harlow Commercial Properties"
+    }
+  ]
+}

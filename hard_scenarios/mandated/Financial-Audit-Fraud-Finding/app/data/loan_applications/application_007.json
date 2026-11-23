@@ -1,0 +1,33 @@
+{
+  "id": "007",
+  "customer": "Pinecrest Bakery",
+  "application_date": "2023-03-01",
+  "requested_amount": 90000,
+  "fund_source": "Business revenue",
+  "transactions": [
+    {
+      "amount": 9400,
+      "date": "2023-02-06",
+      "type": "cash_deposit",
+      "counterparty": "Pinecrest Bakery Till"
+    },
+    {
+      "amount": 9850,
+      "date": "2023-02-07",
+      "type": "cash_deposit",
+      "counterparty": "Pinecrest Bakery Till"
+    },
+    {
+      "amount": 9600,
+      "date": "2023-02-09",
+      "type": "cash_deposit",
+      "counterparty": "Pinecrest Bakery Till"
+    },
+    {
+      "amount": 9900,
+      "date": "2023-02-10",
+      "type": "cash_deposit",
+      "counterparty": "Pinecrest Bakery Till"
+    }
+  ]
+}

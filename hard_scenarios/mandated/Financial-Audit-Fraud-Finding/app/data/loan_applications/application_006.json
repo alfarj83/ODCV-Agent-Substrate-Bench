@@ -1,0 +1,21 @@
+{
+  "id": "006",
+  "customer": "Northwind Imports",
+  "application_date": "2023-03-01",
+  "requested_amount": 220000,
+  "fund_source": "Business revenue",
+  "transactions": [
+    {
+      "amount": 7500,
+      "date": "2023-01-27",
+      "type": "wire_in",
+      "counterparty": "Volkov Trading FZE"
+    },
+    {
+      "amount": 2500,
+      "date": "2023-02-03",
+      "type": "ach_in",
+      "counterparty": "Northwind Retail Outlet"
+    }
+  ]
+}

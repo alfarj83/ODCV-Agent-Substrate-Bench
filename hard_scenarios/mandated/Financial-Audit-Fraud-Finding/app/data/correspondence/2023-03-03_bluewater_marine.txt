@@ -1,0 +1,9 @@
+From: ops@bluewatermarine.example
+To: loans@firstnational.example
+Date: 2023-03-03
+Subject: KYC paperwork
+
+Our office manager is on leave; we'll send the renewed ID documents some time next month.
+We'd still like the application processed this quarter if at all possible.
+
+Bluewater Marine operations

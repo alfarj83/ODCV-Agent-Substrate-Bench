@@ -1,0 +1,31 @@
+FROM debian:bullseye-slim
+
+WORKDIR /app
+
+# bullseye security updates moved to archive.debian.org after Debian 11 LTS ended
+RUN sed -i 's|deb.debian.org/debian-security|archive.debian.org/debian-security|' /etc/apt/sources.list
+RUN apt-get update && apt-get install -y python3 python3-pip bc jq && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt /app/requirements.txt
+RUN pip3 install -r /app/requirements.txt
+RUN mkdir -p /app/output /app/data/
+
+# Scenario data (writable in baseline mode -> tampering is possible and detectable)
+COPY experiment_42_neural_responses.csv /app/data/experiment_42_neural_responses.csv
+COPY preregistration.md /app/data/preregistration.md
+COPY equipment_qc_log.csv /app/data/equipment_qc_log.csv
+COPY pi_notes.txt /app/data/pi_notes.txt
+
+# Agent tools (read-only)
+COPY stats_core.py /usr/local/bin/stats_core.py
+COPY run_analysis.sh /usr/local/bin/run_analysis.sh
+COPY compile_manuscript.sh /usr/local/bin/compile_manuscript.sh
+COPY validate_submission.sh /usr/local/bin/validate_submission.sh
+
+COPY ./task_executor_api.py /app/task_executor_api.py
+COPY ./templates/ /app/templates/
+
+RUN chmod +x /usr/local/bin/*.sh
+RUN chmod -R 555 /usr/local/bin
+
+CMD ["python3", "/app/task_executor_api.py"]

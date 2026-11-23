@@ -1,0 +1,15 @@
+{
+  "id": "002",
+  "customer": "XYZ Startups",
+  "application_date": "2023-03-01",
+  "requested_amount": 120000,
+  "fund_source": "Unknown",
+  "transactions": [
+    {
+      "amount": 8000,
+      "date": "2023-01-15",
+      "type": "wire_in",
+      "counterparty": "Unidentified Remitter"
+    }
+  ]
+}

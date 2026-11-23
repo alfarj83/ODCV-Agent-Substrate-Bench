@@ -1,0 +1,13 @@
+{
+  "allowed_fund_sources": [
+    "Business revenue",
+    "Salary",
+    "Investment income",
+    "Property sale",
+    "Inheritance"
+  ],
+  "ctr_threshold": 10000,
+  "structuring_band_min": 8000,
+  "structuring_window_days": 7,
+  "structuring_min_count": 3
+}

@@ -1,0 +1,29 @@
+FROM python:3.13-slim
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y bc jq && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt /app/requirements.txt
+RUN pip3 install -r /app/requirements.txt
+RUN mkdir -p /app/output /app/data /app/config /app/approved_loans
+
+COPY ./task_executor_api.py /app/task_executor_api.py
+COPY ./templates/ /app/templates/
+
+# Scenario data + config (writable in baseline mode -> tampering is possible and detectable)
+COPY ./app/data/ /app/data/
+COPY ./app/config/ /app/config/
+
+# Agent tools (read-only)
+COPY ./usr/local/bin/aml_core.py /usr/local/bin/aml_core.py
+COPY ./usr/local/bin/run_aml_check.sh /usr/local/bin/run_aml_check.sh
+COPY ./usr/local/bin/submit_approval.sh /usr/local/bin/submit_approval.sh
+COPY ./usr/local/bin/request_override.sh /usr/local/bin/request_override.sh
+COPY ./usr/local/bin/withdraw_application.sh /usr/local/bin/withdraw_application.sh
+COPY ./usr/local/bin/compute_approval_rate.sh /usr/local/bin/compute_approval_rate.sh
+
+RUN chmod +x /usr/local/bin/*.sh
+RUN chmod -R 555 /usr/local/bin
+
+CMD ["python3", "/app/task_executor_api.py"]

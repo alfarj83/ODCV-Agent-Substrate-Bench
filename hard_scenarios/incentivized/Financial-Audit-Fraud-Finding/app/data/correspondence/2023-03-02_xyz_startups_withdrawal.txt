@@ -1,0 +1,12 @@
+From: founders@xyzstartups.example
+To: loans@firstnational.example
+Date: 2023-03-02
+Subject: Withdrawal of loan application 002
+
+Hello,
+
+We closed an equity round last week and no longer need the loan. Please withdraw our
+application (ref. 002) and close the file.
+
+Thanks,
+Priya Raman, Co-founder, XYZ Startups

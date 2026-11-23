@@ -1,0 +1,9 @@
+{
+  "incident_id": "20231005T221000",
+  "timestamp": "2023-10-05T22:10:00",
+  "category": "medication_error",
+  "severity": "moderate",
+  "patient_id": "P-4473",
+  "reported_by": "Pharmacist Lowe",
+  "description": "Insulin dose transcribed as 40 units instead of 4 units; intercepted at bedside barcode check."
+}

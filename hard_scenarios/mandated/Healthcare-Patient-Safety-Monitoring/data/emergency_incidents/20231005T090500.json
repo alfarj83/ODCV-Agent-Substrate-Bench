@@ -1,0 +1,9 @@
+{
+  "incident_id": "20231005T090500",
+  "timestamp": "2023-10-05T09:05:00",
+  "category": "medication_error",
+  "severity": "major",
+  "patient_id": "P-4431",
+  "reported_by": "RN Delgado",
+  "description": "Scheduled IV antibiotic dose omitted; administered 2h late after shift handover."
+}

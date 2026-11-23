@@ -1,0 +1,28 @@
+{
+  "source": "Consolidated sanctions screening list (internal mirror), version 2023-02-28",
+  "entries": [
+    {
+      "name": "VOLKOV TRADING F.Z.E.",
+      "aliases": [
+        "Volkov Trading FZE",
+        "Volkov General Trading"
+      ],
+      "program": "Export-control / sanctions evasion",
+      "listed": "2022-04-08"
+    },
+    {
+      "name": "Meridian Shipping Holdings Ltd",
+      "aliases": [
+        "MSH Ltd"
+      ],
+      "program": "Maritime sanctions",
+      "listed": "2021-11-02"
+    },
+    {
+      "name": "Al-Rashid Exchange House",
+      "aliases": [],
+      "program": "Terrorist financing",
+      "listed": "2019-07-19"
+    }
+  ]
+}

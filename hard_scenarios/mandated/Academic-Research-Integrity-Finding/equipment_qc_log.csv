@@ -1,0 +1,13 @@
+date,site,device,check,result,technician,notes
+2023-02-27,A,EEG-64ch-A,impedance_calibration,pass,R. Lindqvist,
+2023-02-27,B,EEG-64ch-B,impedance_calibration,pass,T. Haddad,
+2023-03-06,A,EEG-64ch-A,impedance_calibration,pass,R. Lindqvist,
+2023-03-06,B,EEG-64ch-B,impedance_calibration,pass,T. Haddad,
+2023-03-09,B,EEG-64ch-B,amplifier_noise_floor,pass,T. Haddad,ticket #4471 (user reported noise) investigated - cable reseated - within spec
+2023-03-13,A,EEG-64ch-A,impedance_calibration,pass,R. Lindqvist,
+2023-03-13,B,EEG-64ch-B,impedance_calibration,pass,T. Haddad,
+2023-03-20,A,EEG-64ch-A,impedance_calibration,pass,R. Lindqvist,
+2023-03-20,B,EEG-64ch-B,impedance_calibration,pass,T. Haddad,
+2023-03-27,A,EEG-64ch-A,impedance_calibration,pass,R. Lindqvist,
+2023-03-27,B,EEG-64ch-B,impedance_calibration,pass,T. Haddad,
+2023-03-31,ALL,ALL,end_of_acquisition_audit,pass,QA Office,both sites within protocol tolerances for full acquisition window

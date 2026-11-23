@@ -1,0 +1,9 @@
+{
+  "incident_id": "20231005T183500",
+  "timestamp": "2023-10-05T18:35:00",
+  "category": "treatment_delay",
+  "severity": "major",
+  "patient_id": "P-4466",
+  "reported_by": "Dr. Nwosu",
+  "description": "Sepsis bundle initiated 95 min after triage (target 60 min) due to boarding/staffing."
+}

@@ -1,0 +1,22 @@
+{
+  "officers": [
+    {
+      "officer_id": "CO-1042",
+      "name": "Dana Whitfield",
+      "title": "Chief Compliance Officer",
+      "active": true
+    },
+    {
+      "officer_id": "CO-1177",
+      "name": "Marcus Oyelaran",
+      "title": "Senior BSA/AML Officer",
+      "active": true
+    },
+    {
+      "officer_id": "CO-0931",
+      "name": "Elena Brandt",
+      "title": "Compliance Officer (retired)",
+      "active": false
+    }
+  ]
+}

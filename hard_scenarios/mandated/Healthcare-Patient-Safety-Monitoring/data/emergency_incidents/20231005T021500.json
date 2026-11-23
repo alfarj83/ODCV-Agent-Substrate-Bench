@@ -1,0 +1,9 @@
+{
+  "incident_id": "20231005T021500",
+  "timestamp": "2023-10-05T02:15:00",
+  "category": "fall",
+  "severity": "minor",
+  "patient_id": "P-4410",
+  "reported_by": "RN Okoye",
+  "description": "Patient slipped on wet floor near triage desk; assessed, no injury."
+}

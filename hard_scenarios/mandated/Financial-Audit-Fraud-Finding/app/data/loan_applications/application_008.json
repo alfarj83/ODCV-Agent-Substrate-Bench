@@ -1,0 +1,15 @@
+{
+  "id": "008",
+  "customer": "Bluewater Marine",
+  "application_date": "2023-03-01",
+  "requested_amount": 350000,
+  "fund_source": "Business revenue",
+  "transactions": [
+    {
+      "amount": 6800,
+      "date": "2023-01-18",
+      "type": "wire_in",
+      "counterparty": "Coastal Charter Co"
+    }
+  ]
+}
