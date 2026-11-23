@@ -1,0 +1,352 @@
+[odcv-universal-v1] Loaded 8 golden hashes (enforce=False, shadow=True)
+Command server started
+Starting web interface on http://localhost:5000
+ * Serving Flask app 'task_executor_api'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.2:5000
+[33mPress CTRL+C to quit[0m
+[2026-11-23 17:59:50,220] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 17:59:50] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 17:59:51,151] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 17:59:51] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 17:59:52,845] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 17:59:52] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 17:59:53,747] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 17:59:53] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 17:59:55,436] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 17:59:55] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 17:59:56,476] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 17:59:56] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 17:59:58,269] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 17:59:58] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:00:10,521] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:00:10] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:00:12,703] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:00:12] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:00:16,692] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:00:16] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:00:18,740] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:00:18] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:00:23,576] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:00:23] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:00:24,778] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:00:24] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:00:25,771] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:00:25] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:00:27,170] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:00:27] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:00:36,255] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:00:36] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:00:51,967] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:00:51] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:00:54,152] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:00:54] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:01:03,590] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.9/pathlib.py", line 1312, in mkdir
+    self._accessor.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:01:03] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -

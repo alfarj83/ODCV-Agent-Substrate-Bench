@@ -1,0 +1,445 @@
+[odcv-universal-v1] Loaded 20 golden hashes (enforce=False, shadow=True)
+Command server started
+Starting web interface on http://localhost:5000
+ * Serving Flask app 'task_executor_api'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.2:5000
+[33mPress CTRL+C to quit[0m
+[2026-11-23 18:06:19,162] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+    ~~~~~~~~~~~~~~~~^^
+        "type": "decision",
+        ^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        "monotonic_ns": t_decision_ns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:06:19] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:06:19,835] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+    ~~~~~~~~~~~~~~~~^^
+        "type": "decision",
+        ^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        "monotonic_ns": t_decision_ns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:06:19] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:06:21,364] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+    ~~~~~~~~~~~~~~~~^^
+        "type": "decision",
+        ^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        "monotonic_ns": t_decision_ns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:06:21] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:06:24,017] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+    ~~~~~~~~~~~~~~~~^^
+        "type": "decision",
+        ^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        "monotonic_ns": t_decision_ns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:06:24] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:06:30,350] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+    ~~~~~~~~~~~~~~~~^^
+        "type": "decision",
+        ^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        "monotonic_ns": t_decision_ns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:06:30] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:06:32,580] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+    ~~~~~~~~~~~~~~~~^^
+        "type": "decision",
+        ^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        "monotonic_ns": t_decision_ns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:06:32] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:06:33,955] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+    ~~~~~~~~~~~~~~~~^^
+        "type": "decision",
+        ^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        "monotonic_ns": t_decision_ns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:06:33] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:06:40,034] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+    ~~~~~~~~~~~~~~~~^^
+        "type": "decision",
+        ^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        "monotonic_ns": t_decision_ns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:06:40] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:06:47,212] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+    ~~~~~~~~~~~~~~~~^^
+        "type": "decision",
+        ^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        "monotonic_ns": t_decision_ns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:06:47] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:06:48,671] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+    ~~~~~~~~~~~~~~~~^^
+        "type": "decision",
+        ^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        "monotonic_ns": t_decision_ns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:06:48] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:06:49,871] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+    ~~~~~~~~~~~~~~~~^^
+        "type": "decision",
+        ^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        "monotonic_ns": t_decision_ns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:06:49] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:06:52,350] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+    ~~~~~~~~~~~~~~~~^^
+        "type": "decision",
+        ^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        "monotonic_ns": t_decision_ns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:06:52] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:06:58,662] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+    ~~~~~~~~~~~~~~~~^^
+        "type": "decision",
+        ^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        "monotonic_ns": t_decision_ns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:06:58] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:07:01,007] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+    ~~~~~~~~~~~~~~~~^^
+        "type": "decision",
+        ^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        "monotonic_ns": t_decision_ns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:07:01] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
+[2026-11-23 18:07:03,079] ERROR in app: Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/app/task_executor_api.py", line 275, in execute_endpoint
+    emit_audit_event({
+    ~~~~~~~~~~~~~~~~^^
+        "type": "decision",
+        ^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        "monotonic_ns": t_decision_ns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/app/task_executor_api.py", line 92, in emit_audit_event
+    AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: '/audit'
+172.18.0.3 - - [23/Nov/2026 18:07:03] "[35m[1mPOST /execute HTTP/1.1[0m" 500 -
