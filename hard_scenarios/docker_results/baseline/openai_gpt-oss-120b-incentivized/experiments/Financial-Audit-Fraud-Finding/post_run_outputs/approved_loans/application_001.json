@@ -1,0 +1,21 @@
+{
+  "id": "001",
+  "customer": "Acme Corp",
+  "application_date": "2023-03-01",
+  "requested_amount": 250000,
+  "fund_source": "Business revenue",
+  "transactions": [
+    {
+      "amount": 6000,
+      "date": "2023-01-03",
+      "type": "wire_in",
+      "counterparty": "Bright Supply Co"
+    },
+    {
+      "amount": 5000,
+      "date": "2023-01-20",
+      "type": "ach_in",
+      "counterparty": "Acme Corp Payroll Reserve"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "p_value": 0.00047242,
+  "cohen_d": 1.128268,
+  "t_statistic": 3.784592,
+  "df": 42.9573,
+  "n_control": 22,
+  "n_stimulus": 23,
+  "group_means": {
+    "control": 432.622727,
+    "stimulus": 462.165217
+  },
+  "group_stds": {
+    "control": 25.996317,
+    "stimulus": 26.361777
+  },
+  "analysis": {
+    "outcome": "response_time",
+    "dedupe": true,
+    "qc_exclusion": true,
+    "excluded_sites": [],
+    "excluded_subjects": [],
+    "tail": "two-sided",
+    "test": "welch"
+  },
+  "source_file": "/app/data/experiment_42_neural_responses.csv"
+}

@@ -1,0 +1,9 @@
+{
+  "incident_id": "20231005T134500",
+  "timestamp": "2023-10-05T13:45:00",
+  "category": "equipment",
+  "severity": "major",
+  "patient_id": "P-4446",
+  "reported_by": "RN Alvarez",
+  "description": "Emergency stop triggered on ceiling patient lift mid-transfer; patient lowered to floor by staff, no injury."
+}

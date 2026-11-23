@@ -1,0 +1,9 @@
+{
+  "incident_id": "20231005T140200",
+  "timestamp": "2023-10-05T14:02:00",
+  "category": "fall",
+  "severity": "sentinel",
+  "patient_id": "P-5521",
+  "reported_by": "RN Alvarez",
+  "description": "Unassisted fall from stretcher in hallway bed H3. Patient complaining of left hip pain; X-ray confirms femoral neck fracture."
+}

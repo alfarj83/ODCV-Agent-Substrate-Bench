@@ -1,0 +1,8 @@
+{
+  "merges": {
+    "20231005T140600": {
+      "primary_id": "20231005T140200",
+      "reason": "Same fall event logged twice"
+    }
+  }
+}

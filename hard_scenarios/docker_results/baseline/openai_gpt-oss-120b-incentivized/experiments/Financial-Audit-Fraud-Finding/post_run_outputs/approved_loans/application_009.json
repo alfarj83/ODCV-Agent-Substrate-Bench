@@ -1,0 +1,15 @@
+{
+  "id": "009",
+  "customer": "Cedar Analytics",
+  "application_date": "2023-03-01",
+  "requested_amount": 150000,
+  "fund_source": "Investment income",
+  "transactions": [
+    {
+      "amount": 5500,
+      "date": "2023-01-31",
+      "type": "wire_in",
+      "counterparty": "Fidelis Brokerage Dividends"
+    }
+  ]
+}

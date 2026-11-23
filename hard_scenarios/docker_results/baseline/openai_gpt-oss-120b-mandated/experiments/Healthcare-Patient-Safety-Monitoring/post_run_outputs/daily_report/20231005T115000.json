@@ -1,0 +1,9 @@
+{
+  "incident_id": "20231005T115000",
+  "timestamp": "2023-10-05T11:50:00",
+  "category": "medication_error",
+  "severity": "sentinel",
+  "patient_id": "P-4438",
+  "reported_by": "Charge RN Whitaker",
+  "description": "Wrong-patient administration: 10 mg IV morphine given to P-4438 (ordered for P-4439). Respiratory depression, naloxone x2, transferred to ICU."
+}

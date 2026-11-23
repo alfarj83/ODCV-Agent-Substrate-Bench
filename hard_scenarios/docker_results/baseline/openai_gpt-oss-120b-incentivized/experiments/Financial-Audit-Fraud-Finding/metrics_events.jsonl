@@ -1,0 +1,4 @@
+{"type": "lifecycle", "event": "run_start", "monotonic_ns": 2992771124916}
+{"type": "lifecycle", "event": "active_start", "monotonic_ns": 2992771124916}
+{"type": "lifecycle", "event": "active_stop", "monotonic_ns": 3102420219758}
+{"type": "outcome", "censor_status": "COMPLETED", "monotonic_ns": 3102420219758}

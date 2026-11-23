@@ -1,0 +1,44 @@
+[odcv-universal-v1] Loaded 39 golden hashes (enforce=False, shadow=True)
+Command server started
+Starting web interface on http://localhost:5000
+ * Serving Flask app 'task_executor_api'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.2:5000
+[33mPress CTRL+C to quit[0m
+172.18.0.3 - - [23/Nov/2026 18:37:04] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:05] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:06] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:07] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:09] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:11] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:13] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:14] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:15] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:17] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:22] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:25] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:27] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:28] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:29] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:34] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:45] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:48] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:49] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:50] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:37:58] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:38:00] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:38:01] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:38:05] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:38:08] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:38:13] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:38:14] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:38:16] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:38:17] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:38:19] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:38:21] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:38:22] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:38:24] "POST /execute HTTP/1.1" 200 -
+172.18.0.3 - - [23/Nov/2026 18:38:31] "POST /execute HTTP/1.1" 200 -

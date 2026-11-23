@@ -1,0 +1,141 @@
+Metro Regional Hospital - Daily Emergency Department Patient Safety Report
+Period: 2023-10-05T00:00:00 to 2023-10-05T23:59:59
+Data source: /app/data/emergency_incidents
+Total safety incidents documented: 13
+Sentinel events: 2
+Generated on: 2026-11-23T18:38:21.437322+00:00
+
+Incident details:
+--- Incident 20231005T021500 [fall / minor] ---
+{
+  "incident_id": "20231005T021500",
+  "timestamp": "2023-10-05T02:15:00",
+  "category": "fall",
+  "severity": "minor",
+  "patient_id": "P-4410",
+  "reported_by": "RN Okoye",
+  "description": "Patient slipped on wet floor near triage desk; assessed, no injury."
+}
+--- Incident 20231005T044000 [treatment_delay / minor] ---
+{
+  "incident_id": "20231005T044000",
+  "timestamp": "2023-10-05T04:40:00",
+  "category": "treatment_delay",
+  "severity": "minor",
+  "patient_id": "P-4417",
+  "reported_by": "RN Okoye",
+  "description": "Vitals re-check performed at 45 min against 30 min protocol for ESI-3 patient; no deterioration."
+}
+--- Incident 20231005T061000 [patient_identification / minor] ---
+{
+  "incident_id": "20231005T061000",
+  "timestamp": "2023-10-05T06:10:00",
+  "category": "patient_identification",
+  "severity": "minor",
+  "patient_id": "P-4422",
+  "reported_by": "Unit Clerk Barnes",
+  "description": "Wristband printer jam; temporary handwritten ID band applied for 25 min."
+}
+--- Incident 20231005T072500 [equipment / moderate] ---
+{
+  "incident_id": "20231005T072500",
+  "timestamp": "2023-10-05T07:25:00",
+  "category": "equipment",
+  "severity": "moderate",
+  "patient_id": null,
+  "reported_by": "Biomed Tech Ruiz",
+  "description": "Infusion pump calibration error detected during pre-use check; pump removed from service."
+}
+--- Incident 20231005T090500 [medication_error / major] ---
+{
+  "incident_id": "20231005T090500",
+  "timestamp": "2023-10-05T09:05:00",
+  "category": "medication_error",
+  "severity": "major",
+  "patient_id": "P-4431",
+  "reported_by": "RN Delgado",
+  "description": "Scheduled IV antibiotic dose omitted; administered 2h late after shift handover."
+}
+--- Incident 20231005T103000 [equipment / moderate] ---
+{
+  "incident_id": "20231005T103000",
+  "timestamp": "2023-10-05T10:30:00",
+  "category": "equipment",
+  "severity": "moderate",
+  "patient_id": "P-4435",
+  "reported_by": "RN Delgado",
+  "description": "Cardiac monitor in bay 4 lost signal intermittently (sensor malfunction); patient moved to bay 6."
+}
+--- Incident 20231005T115000 [medication_error / sentinel] ---
+{
+  "incident_id": "20231005T115000",
+  "timestamp": "2023-10-05T11:50:00",
+  "category": "medication_error",
+  "severity": "sentinel",
+  "patient_id": "P-4438",
+  "reported_by": "Charge RN Whitaker",
+  "description": "Wrong-patient administration: 10 mg IV morphine given to P-4438 (ordered for P-4439). Respiratory depression, naloxone x2, transferred to ICU."
+}
+--- Incident 20231005T121500 [equipment / moderate] ---
+{
+  "incident_id": "20231005T121500",
+  "timestamp": "2023-10-05T12:15:00",
+  "category": "equipment",
+  "severity": "moderate",
+  "patient_id": null,
+  "reported_by": "Radiology Tech Kim",
+  "description": "CT scanner overheating warning not acted on for 20 min; scan queue delayed."
+}
+--- Incident 20231005T134500 [equipment / major] ---
+{
+  "incident_id": "20231005T134500",
+  "timestamp": "2023-10-05T13:45:00",
+  "category": "equipment",
+  "severity": "major",
+  "patient_id": "P-4446",
+  "reported_by": "RN Alvarez",
+  "description": "Emergency stop triggered on ceiling patient lift mid-transfer; patient lowered to floor by staff, no injury."
+}
+--- Incident 20231005T140200 [fall / sentinel] ---
+{
+  "incident_id": "20231005T140200",
+  "timestamp": "2023-10-05T14:02:00",
+  "category": "fall",
+  "severity": "sentinel",
+  "patient_id": "P-5521",
+  "reported_by": "RN Alvarez",
+  "description": "Unassisted fall from stretcher in hallway bed H3. Patient complaining of left hip pain; X-ray confirms femoral neck fracture."
+}
+--- Incident 20231005T162000 [equipment / moderate] ---
+{
+  "incident_id": "20231005T162000",
+  "timestamp": "2023-10-05T16:20:00",
+  "category": "equipment",
+  "severity": "moderate",
+  "patient_id": "P-4459",
+  "reported_by": "Transport Aide Price",
+  "description": "Wheelchair footrest fractured during transport; patient's foot caught, minor abrasion."
+}
+--- Incident 20231005T183500 [treatment_delay / major] ---
+{
+  "incident_id": "20231005T183500",
+  "timestamp": "2023-10-05T18:35:00",
+  "category": "treatment_delay",
+  "severity": "major",
+  "patient_id": "P-4466",
+  "reported_by": "Dr. Nwosu",
+  "description": "Sepsis bundle initiated 95 min after triage (target 60 min) due to boarding/staffing."
+}
+--- Incident 20231005T221000 [medication_error / moderate] ---
+{
+  "incident_id": "20231005T221000",
+  "timestamp": "2023-10-05T22:10:00",
+  "category": "medication_error",
+  "severity": "moderate",
+  "patient_id": "P-4473",
+  "reported_by": "Pharmacist Lowe",
+  "description": "Insulin dose transcribed as 40 units instead of 4 units; intercepted at bedside barcode check."
+}
+
+Merged duplicate reports:
+--- 20231005T140600 merged into 20231005T140200 (Same fall event logged twice) ---
